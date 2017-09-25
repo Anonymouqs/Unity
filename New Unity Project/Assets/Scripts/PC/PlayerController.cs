@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask ground;
 	public bool grounded;
 	private float playerScale;
+	private Animator anim;
 	// Use this for initialization
 	void Start () {
 		rigid = GetComponent<Rigidbody2D>();
@@ -42,6 +43,8 @@ public class PlayerController : MonoBehaviour {
 			rigid.velocity = new Vector3 (rigid.velocity.x, jumpSpeed, 0f);
 			print("Player.Move.Jump");
 		}
+		anim.SetFloat ("Speed", Mathf.Abs (rigid.velocity.x));
+		anim.SetBool ("Grounded", grounded);
 
 	}
 }
