@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		rigid = GetComponent<Rigidbody2D>();
 		playerScale = gameObject.transform.localScale.y;
+		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
