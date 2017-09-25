@@ -28,5 +28,6 @@ public class CameraFollow : MonoBehaviour {
 		//if(target.transform.localScale.x > 0 f))
 		//{ target Position = new Vector3(targetPosition + followAhead, targetPosition.y, target position.z) }
 		//else{{ target Position = new Vector3(targetPosition + -git followAhead, targetPosition.y, target position.z) }}
+		//transform.position = Vector3.Lerp(transform.position,transform.position *Time.deltaTime)
 	}
 }
