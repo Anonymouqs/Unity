@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f125f7c50d8714dfdb82fe437a9f9d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1528537366692958, guid: 098c9e273026c40d1b8869f8b5ae9c5e, type: 2}
   cameraZ: 1
   moveRate: 0
   followAhead: 0
