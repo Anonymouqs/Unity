@@ -13,11 +13,15 @@ public class PlayerController : MonoBehaviour {
 	public bool grounded;
 	private float playerScale;
 	private Animator anim;
+	private int airJump;
+	public int jumpLimit;
+	public Vector3 respawn;
 	// Use this for initialization
 	void Start () {
 		rigid = GetComponent<Rigidbody2D>();
 		playerScale = gameObject.transform.localScale.y;
 		anim = GetComponent<Animator> ();
+		respawn = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -39,13 +43,19 @@ public class PlayerController : MonoBehaviour {
 		{
 			rigid.velocity = new Vector3 (0f, rigid.velocity.y, 0f);
 		}
-		if (Input.GetButtonDown("Jump") && grounded)
+		if (Input.GetButtonDown("Jump") && (airJump + 1 < jumpLimit))
 		{
 			rigid.velocity = new Vector3 (rigid.velocity.x, jumpSpeed, 0f);
 			print("Player.Move.Jump");
+			airJump = airJump + 1;
+		}
+		if (grounded)
+		{
+			airJump = 0;
 		}
 		anim.SetFloat ("Speed", Mathf.Abs (rigid.velocity.x));
 		anim.SetBool ("Grounded", grounded);
+		print (airJump);
 
 	}
 }
