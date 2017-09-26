@@ -55,7 +55,14 @@ public class PlayerController : MonoBehaviour {
 		}
 		anim.SetFloat ("Speed", Mathf.Abs (rigid.velocity.x));
 		anim.SetBool ("Grounded", grounded);
-		print (airJump);
 
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if(other.tag == "KillPlane")
+			{
+			gameObject.transform.position = respawn;
+			}
 	}
 }

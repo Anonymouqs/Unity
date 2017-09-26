@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 439093770}
   m_Layer: 0
   m_Name: Death
-  m_TagString: Untagged
+  m_TagString: KillPlane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498,7 +498,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4211960705187534, guid: 098c9e273026c40d1b8869f8b5ae9c5e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -23.3
+      value: -132.9
       objectReference: {fileID: 0}
     - target: {fileID: 4211960705187534, guid: 098c9e273026c40d1b8869f8b5ae9c5e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -552,6 +552,11 @@ Prefab:
         type: 2}
       propertyPath: jumpLimit
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50109277756229432, guid: 098c9e273026c40d1b8869f8b5ae9c5e,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 098c9e273026c40d1b8869f8b5ae9c5e, type: 2}
