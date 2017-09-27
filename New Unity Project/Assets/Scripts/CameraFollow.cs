@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
-	public GameObject player = GameObject.Find ("Player");
+	public GameObject player;
 	private Vector3 target;
 	private Vector3 cameraPos;
+	private Vector3 newPos;
 	public float cameraZ;  //This is the Z value for the Camera
 	public float moveRate;//Overall Interpolation Speed to move to player
 	public float followAhead;
+	public Vector3 reciprocalSpeed;
 
 	private Vector3 targetPosition;
 
@@ -22,7 +24,9 @@ public class CameraFollow : MonoBehaviour {
 		cameraPos = new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,gameObject.transform.position.z);
 		GameObject.Find ("Player");
 		target = new Vector3 (player.transform.position.x, player.transform.position.y, cameraZ);
-
+		newPos = ((cameraPos - target) - (cameraPos - target));
+		transform.position = transform.position + new Vector3(newPos.x/reciprocalSpeed.x,newPos.y/reciprocalSpeed.y,newPos.z/reciprocalSpeed.z);
+		print (newPos);
 
 		//transform.position = targetPosition;
 		//if(target.transform.localScale.x > 0 f))
