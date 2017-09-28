@@ -27,17 +27,14 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, ground); 
-		print (grounded);
 		if (Input.GetAxisRaw ("Horizontal") > 0f) 
 		{
 			rigid.velocity = new Vector3 (moveSpeed, rigid.velocity.y, 0f);
 			transform.localScale = new Vector3(playerScale,playerScale,playerScale);
-			print("Player.Move.Right");
 		} 
 		else if (Input.GetAxisRaw ("Horizontal") < 0f) {
 			rigid.velocity = new Vector3 (-moveSpeed, rigid.velocity.y, 0f);
 			transform.localScale = new Vector3(-playerScale,playerScale,playerScale);
-			print("Player.Move.Left");
 		} 
 		else 
 		{
@@ -46,7 +43,6 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown("Jump") && (airJump + 1 < jumpLimit))
 		{
 			rigid.velocity = new Vector3 (rigid.velocity.x, jumpSpeed, 0f);
-			print("Player.Move.Jump");
 			airJump = airJump + 1;
 		}
 		if (grounded)
@@ -64,5 +60,9 @@ public class PlayerController : MonoBehaviour {
 			{
 			gameObject.transform.position = respawn;
 			}
+		if(other.tag == "Checkpoint")
+		{
+			respawn = other.transform.position;
+		}
 	}
 }

@@ -16,8 +16,9 @@ public class CheckpointController : MonoBehaviour {
 		
 	}
 
-	void onTrigger2DEnter(Collider2D other)
+	void OnTriggerEnter2D (Collider2D other)
 	{
+		print ("Checkpoint");
 		if (other.tag == "Player") 
 		{
 			theSpriteRenderer.sprite = flagOpen;
