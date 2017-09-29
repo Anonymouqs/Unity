@@ -13,9 +13,12 @@ public class IntroGUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Application.LoadLevel ("Intro");
 	}
 	void OnClick()
 	{
+		
+	}
+	public void load (string load){
+		Application.LoadLevel (load);
 	}
 }
