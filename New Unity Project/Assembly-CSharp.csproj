@@ -51,10 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\IntroGUI.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CheckpointController.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
+     <Compile Include="Assets\Scripts\IntroGUI.cs" />
      <Compile Include="Assets\Scripts\PC\PlayerController.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/jehbar.ibarra/Documents/Projects/Unity/New Unity Project/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
