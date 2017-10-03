@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Prefabs/Platforms/Scenes/Test/Artwork.unity
-  isLoaded: 1
-  isActive: 1
