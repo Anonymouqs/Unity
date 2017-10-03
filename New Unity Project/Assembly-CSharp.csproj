@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Exit.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\buttonHover.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\IntroGUI.cs" />
+     <Compile Include="Assets\Scripts\PC\LevelManager.cs" />
      <Compile Include="Assets\Scripts\PC\PlayerController.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/jehbar.ibarra/Projects/New Unity Project/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>

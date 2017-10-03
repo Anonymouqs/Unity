@@ -16,12 +16,14 @@ public class PlayerController : MonoBehaviour {
 	private int airJump;
 	public int jumpLimit;
 	public Vector3 respawn;
+	public LevelManager manager;
 	// Use this for initialization
 	void Start () {
 		rigid = GetComponent<Rigidbody2D>();
 		playerScale = gameObject.transform.localScale.y;
 		anim = GetComponent<Animator> ();
 		respawn = transform.position;
+		manager = FindObjectOfType<LevelManager> ();
 	}
 	
 	// Update is called once per frame
@@ -58,7 +60,8 @@ public class PlayerController : MonoBehaviour {
 	{
 		if(other.tag == "KillPlane")
 			{
-			gameObject.transform.position = respawn;
+			//gameObject.transform.position = respawn;
+			manager.respawn();
 			}
 		if(other.tag == "Checkpoint")
 		{

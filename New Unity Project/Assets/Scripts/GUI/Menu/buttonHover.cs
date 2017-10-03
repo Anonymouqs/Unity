@@ -6,7 +6,7 @@ public class buttonHover : MonoBehaviour {
 	private Animator anim;
 	// Use this for initialization
 	void Start () {
-		anim = GetComponent <Animator> ();
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -15,10 +15,12 @@ public class buttonHover : MonoBehaviour {
 	}
 	void OnMouseOver()
 	{
-		anim.SetFloat("mouseOver",(true));
+		print ("mouseover");
+		anim.SetBool("mouseOver",true);
 	}
 	void OnMouseExit()
 	{
-		anim.SetFloat("mouseOver",false);
+		print ("mouseover");
+		anim.SetBool("mouseOver",false);
 	}
 }
