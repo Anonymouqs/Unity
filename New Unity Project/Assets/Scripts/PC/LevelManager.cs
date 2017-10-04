@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour {
-	public float respawnTime;
+	public float respawnTime; // in seconds
 	public PlayerController player;
 	// Use this for initialization
 	void Start () 
@@ -20,11 +20,18 @@ public class LevelManager : MonoBehaviour {
 	}
 	public void respawn()
 	{
+		player.transform.position = player.respawn;
+		StartCoroutine ("RespawnCo");
+	
+	}
+
+	public IEnumerator respawnCo()
+	{
 		player.gameObject.SetActive (false);
+		yield return new WaitForSeconds (respawnTime);
 		player.transform.position = player.respawn;
 		player.gameObject.SetActive (true);
-	
-	
+
 	}
 }
 
