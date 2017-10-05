@@ -51,11 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\score.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\CheckpointController.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\buttonHover.cs" />
      <Compile Include="Assets\Scripts\GUI\Menu\IntroGUI.cs" />
+     <Compile Include="Assets\Scripts\Map\CheckpointController.cs" />
+     <Compile Include="Assets\Scripts\Map\coin.cs" />
+     <Compile Include="Assets\Scripts\Map\hurtPlayer.cs" />
      <Compile Include="Assets\Scripts\PC\LevelManager.cs" />
      <Compile Include="Assets\Scripts\PC\PlayerController.cs" />
  <Reference Include="Facebook.Unity.Settings">
